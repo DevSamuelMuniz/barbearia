@@ -1,36 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
-import Home from "./pages/Home/";
+
+
+import Login from "./pages/Login/Login";
+import Registro from "./pages/Registro/Registro"
 
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
-
   return (
     <Router>
-      {loading ? (
-        <SplashScreen />
-      ) : (
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
+      </Routes>
     </Router>
   );
 }
 
-// OBS ESSA LÓGICA É DE OUTRO PROJETO, TEMOS QUE REVISAR (SPLASHSCREEN)
 
 export default App;
