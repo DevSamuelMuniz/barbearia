@@ -31,4 +31,6 @@ function App() {
   );
 }
 
+// OBS ESSA LÓGICA É DE OUTRO PROJETO, TEMOS QUE REVISAR (SPLASHSCREEN)
+
 export default App;
