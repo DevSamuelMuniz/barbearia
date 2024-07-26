@@ -40,3 +40,18 @@
 .filtro-pc:hover{
     background-color: #df9842;
 }
+
+.pagination-buttons{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-next{
+    background-color: #E18B22;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 2rem;
+}
