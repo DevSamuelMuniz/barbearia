@@ -1,5 +1,8 @@
 import React from "react";
 
+//css
+import "./proximosClientes.css"
+
 //components
 import CardPc from "../CardPc/CardPc";
 
@@ -14,8 +17,8 @@ function ProximosClientes() {
     };
 
     return (
-        <main>
-            <div>
+        <main className="main-pc">
+            <div >
                 <h1>PRÓXIMOS CLIENTES</h1>
 
                 <div>{date}</div>
@@ -29,6 +32,17 @@ function ProximosClientes() {
                     hora={dados.hora}
                 />
 
+                <CardPc
+                    nome={dados.nome}
+                    barbeiro={dados.barbeiro}
+                    hora={dados.hora}
+                />
+
+                <CardPc
+                    nome={dados.nome}
+                    barbeiro={dados.barbeiro}
+                    hora={dados.hora}
+                />
                 <CardPc
                     nome={dados.nome}
                     barbeiro={dados.barbeiro}
