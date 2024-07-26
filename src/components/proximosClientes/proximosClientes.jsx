@@ -1,7 +1,7 @@
 import React from "react";
 
-const date = ''
-
+const date = '10/11/2024    '
+const filtro = 'Mais recentes'
 
 function ProximosClientes() {
 
@@ -10,8 +10,8 @@ function ProximosClientes() {
             <div>
                 <h1>PRÓXIMOS CLIENTES</h1>
 
-                <div>{}</div>
-                <div>{}</div>
+                <div>{date}</div>
+                <div>{filtro}</div>
             </div>
         </main>
     )
