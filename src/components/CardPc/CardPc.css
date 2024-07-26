@@ -1,0 +1,32 @@
+
+.main-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    width: 30%;
+
+    border-bottom: 1px solid rgb(134, 134, 134);
+    padding-bottom: 2rem;
+}
+
+.nome-card {
+    font-size: 1.4rem;
+}
+
+.barbeiro-card {
+    font-size: 1.1rem;
+}
+
+.hora-card {
+    font-size: 1.4rem;
+}
+
+.btn-card {
+    border: none;
+    background-color: #1B5506;
+    color: white;
+    padding: 0.3rem 1.4rem;
+    border-radius: .2rem;
+}
