@@ -1,0 +1,27 @@
+
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logoNav {
+    width: 4rem;
+    height: auto;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
