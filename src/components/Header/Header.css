@@ -2,26 +2,37 @@
 
 .container-fluid {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 
 .logoNav {
-    width: 4rem;
-    height: auto;
+    width: 4rem; 
+    height: auto; 
+    margin-right: 2rem;
 }
+
 
 .navbar-collapse {
     display: flex;
     justify-content: center;
+    flex-grow: 1; 
 }
 
 .navbar-nav {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    gap: 5rem; 
 }
 
-.navbar-nav .nav-item {
-    margin: 0 10px;
+.exitNav {
+    margin-left: 2rem; 
+}
+
+.sairNav {
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: bold; 
+    margin-right: 5rem;
 }
