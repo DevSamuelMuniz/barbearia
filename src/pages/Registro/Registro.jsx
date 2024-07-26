@@ -1,10 +1,20 @@
 import React from "react";
 import "./Registro.css";
+import { useNavigate } from "react-router-dom";
 
 // Imagem
 import Logo from '../../assets/img/logo1.png';
 
+
+
 function Registro() {
+
+    const navigate = useNavigate();
+
+    const Login = () => {
+        navigate('/')
+    }
+
     return (
         <main className="main-login">
 
@@ -31,8 +41,9 @@ function Registro() {
                             <label htmlFor="password" className="form-label">Confirme a Senha</label>
                             <input type="password" className="form-control" id="password"  placeholder="Digite sua senha aqui"/>
                         </div>
-                        <button type="submit" className="btnLogin">Registrar</button>
+                        <button type="submit" className="btnRegistro" onClick={Login}>Registrar</button>
                     </form>
+                    <a href="/" className="link-registro">Faça o seu login aqui!</a>
                 </div>
             </div>
 

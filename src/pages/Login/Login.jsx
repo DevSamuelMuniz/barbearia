@@ -1,10 +1,17 @@
 import React from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 // Imagem
 import Logo from '../../assets/img/logo1.png';
 
 function Login() {
+    const navigate = useNavigate();
+
+    const Login = () => {
+        navigate('/home')
+    }
+
     return (
         <main className="main-login">
 
@@ -25,7 +32,8 @@ function Login() {
                             <label htmlFor="password" className="form-label">Senha</label>
                             <input type="password" className="form-control" id="password"  placeholder="Digite sua senha aqui"/>
                         </div>
-                        <button type="submit" className="btnLogin">Entrar</button>
+                        <button type="submit" onClick={Login} className="btnLogin">Entrar</button>
+                        
                     </form>
                     <a href="registro" className="link-registro">Faça seu cadastro aqui!</a>
                 </div>
