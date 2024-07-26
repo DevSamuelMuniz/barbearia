@@ -15,7 +15,28 @@
     box-shadow: 6px 13px 17px 2px rgba(133, 133, 133, 0.82);
 }
 
+.ctn-filtro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .title-pc {
     font-size: 2rem;
     color: rgb(56, 56, 56);
+}
+
+.filtro-pc{
+    color: white;
+    background-color: #E18B22;
+    margin: .4rem 0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.filtro-pc:hover{
+    background-color: #df9842;
 }
