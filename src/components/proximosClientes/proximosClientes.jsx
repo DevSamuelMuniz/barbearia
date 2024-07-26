@@ -12,7 +12,7 @@ function ProximosClientes() {
         barbeiro: 'BARB. MATHEUS',
         hora: '10:40',
     };
-    
+
     return (
         <main>
             <div>
@@ -23,6 +23,12 @@ function ProximosClientes() {
             </div>
 
             <div>
+                <CardPc
+                    nome={dados.nome}
+                    barbeiro={dados.barbeiro}
+                    hora={dados.hora}
+                />
+
                 <CardPc
                     nome={dados.nome}
                     barbeiro={dados.barbeiro}

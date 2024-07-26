@@ -10,7 +10,7 @@ function CardPc({ nome, barbeiro, hora }) {
                 <h2 className="barbeiro-card">{barbeiro}</h2>
             </div>
 
-            <div>
+            <div className="card-right">
                 <h2 className="hora-card">{hora}</h2>
                 <button className="btn-card">FINALIZADO</button>
             </div>
