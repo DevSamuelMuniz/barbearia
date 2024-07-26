@@ -19,13 +19,13 @@ function ProximosClientes() {
     return (
         <main className="main-pc">
             <div >
-                <h1>PRÓXIMOS CLIENTES</h1>
+                <h1 className="title-pc">PRÓXIMOS CLIENTES</h1>
 
                 <div>{date}</div>
                 <div>{filtro}</div>
             </div>
 
-            <div>
+            <div className="card-ctn">
                 <CardPc
                     nome={dados.nome}
                     barbeiro={dados.barbeiro}
@@ -43,11 +43,8 @@ function ProximosClientes() {
                     barbeiro={dados.barbeiro}
                     hora={dados.hora}
                 />
-                <CardPc
-                    nome={dados.nome}
-                    barbeiro={dados.barbeiro}
-                    hora={dados.hora}
-                />
+
+           
             </div>
         </main>
     )

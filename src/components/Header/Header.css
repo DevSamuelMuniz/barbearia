@@ -1,16 +1,21 @@
-
+.main-header {
+    -webkit-box-shadow: 7px 28px 26px -27px rgba(133, 133, 133, 0.24);
+    -moz-box-shadow: 7px 28px 26px -27px rgba(133, 133, 133, 0.185);
+    box-shadow: 7px 28px 26px -27px rgba(133, 133, 133, 0.164);
+}
 
 .container-fluid {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
 }
 
 
 .logoNav {
-    width: 4rem; 
-    height: auto; 
+    width: 4rem;
+    height: auto;
     margin-right: 2rem;
 }
 
@@ -18,21 +23,21 @@
 .navbar-collapse {
     display: flex;
     justify-content: center;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .navbar-nav {
     display: flex;
-    gap: 5rem; 
+    gap: 5rem;
 }
 
 .exitNav {
-    margin-left: 2rem; 
+    margin-left: 2rem;
 }
 
 .sairNav {
-    text-decoration: none; 
-    color: inherit; 
-    font-weight: bold; 
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
     margin-right: 5rem;
 }
