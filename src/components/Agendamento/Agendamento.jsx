@@ -9,30 +9,33 @@ import "./Agendamento.css"
 function Agendamento() {
 
     return (
-        <main className="main-pc">
+        <main className="main-agendamento">
             <div>
                 <h1 className="title-pc">AGENDAMENTO</h1>
             </div>
 
             <div className="card-ctn">
-                <form action="">
-                    <div>
-                        <label htmlFor="">Nome do cliente:</label>
+                <form className="form-agendamento" action="">
+                    <div className="div-form">
+                        <label className="label-agendamento" htmlFor="">Nome do cliente:</label>
                         <br />
-                        <input type="text" name="" id="" />
+                        <input className="input-agendamento" type="text" name="" id="" />
                     </div>
 
-                    <div>
-                        <label htmlFor="">Nome do barbeiro:</label>
+                    <div className="div-form">
+                        <label className="label-agendamento" htmlFor="">Nome do barbeiro:</label>
                         <br />
-                        <input type="text" name="" id="" />
+                        <input className="input-agendamento" type="text" name="" id="" />
                     </div>
 
-                    <div>
-                        <label htmlFor="">Horário marcado:</label>
+                    <div className="div-form">
+                        <label className="label-agendamento" htmlFor="">Horário marcado:</label>
                         <br />
-                        <input type="datetime-local" name="" id="" />
+                        <input className="input-agendamento" type="datetime-local" name="" id="" />
                     </div>
+
+                    <button className="btn-agendamento">AGENDAR</button>
+
                 </form>
             </div>
         </main>

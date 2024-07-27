@@ -9,17 +9,17 @@ function Header() {
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container">
                     <div class="container-fluid">
-                        <img src={Logo} alt="Logo" className="logoNav" />
+                        <a href="/home"><img src={Logo} alt="Logo" className="logoNav" /></a>
                         <div class=" navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/home">INICIO</a>
+                                    <a class="nav-link active" id="link" aria-current="page" href="/home">INICIO</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/login" >AGENDA</a>
+                                    <a class="nav-link active" id="link" href="/login" >AGENDA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/login" >FINANCEIRO</a>
+                                    <a class="nav-link active" id="link" href="/login" >FINANCEIRO</a>
                                 </li>
                             </ul>
                         </div>
