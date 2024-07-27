@@ -6,14 +6,16 @@ import Header from "../../components/Header/Header";
 import ProximosClientes from "../../components/proximosClientes/proximosClientes";
 
 function Home() {
-  
+
 
     return (
-        <main>
-            <Header />
-            <ProximosClientes />
+        <main className="main-home">
+                <Header />
 
-            
+            <div className="ctn-home">
+                <ProximosClientes />
+                <ProximosClientes />
+            </div>
         </main>
     )
 }

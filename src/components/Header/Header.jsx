@@ -5,7 +5,7 @@ import Logo from '../../assets/img/logo1.png';
 
 function Header() {
     return (
-        <main>
+        <main className="main-header">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container">
                     <div class="container-fluid">
