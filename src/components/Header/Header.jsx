@@ -14,7 +14,7 @@ function Header() {
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="link" aria-current="page" href="/home">INICIO</a>
-                                </li>
+                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" id="link" href="/login" >AGENDA</a>
                                 </li>

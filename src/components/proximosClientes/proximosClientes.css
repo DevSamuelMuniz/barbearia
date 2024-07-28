@@ -25,7 +25,7 @@
 
 .title-pc {
     font-size: 2rem;
-    color: rgb(56, 56, 56);
+    color: rgb(71, 71, 71);
 }
 
 .filtro-pc{
@@ -53,6 +53,6 @@
     background-color: #E18B22;
     color: white;
     border: none;
-    border-radius: 1rem;
+    border-radius: .5rem;
     padding: 0.4rem 2rem;
 }

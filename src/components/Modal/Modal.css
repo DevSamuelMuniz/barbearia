@@ -1,0 +1,44 @@
+.modal-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+transform: translate(-50%, -50%);
+
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    color: white;
+    border-radius: 1rem;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.procedimentos {
+    margin: 20px 0;
+}
+
+.procedimentos div {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: #E18B22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+    background: #d48d36;
+}

@@ -52,7 +52,6 @@ function ProximosClientes() {
                         nome={card.nome}
                         barbeiro={card.barbeiro}
                         hora={card.hora}
-                        situacao="PENDENTE"
                     />
                 ))}
             </div>
