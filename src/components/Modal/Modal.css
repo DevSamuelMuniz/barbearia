@@ -2,7 +2,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     width: 70%;
     height: 70%;
@@ -10,7 +10,7 @@ transform: translate(-50%, -50%);
     justify-content: center;
     align-items: center;
     background-color: #303030;
-    color: white;
+    color: #000000;
     border-radius: 1rem;
 }
 
