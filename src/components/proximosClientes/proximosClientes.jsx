@@ -11,7 +11,7 @@ const filtro = 'Mais recentes'
 
 function ProximosClientes() {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    
     const dados = [
         { nome: 'SAMUEL MUNIZ DA SILVA', barbeiro: 'BARB. MATHEUS', hora: '10:40' },
         { nome: 'JOÃO DA SILVA', barbeiro: 'BARB. CARLOS', hora: '11:00' },

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Agendamento.css";
 
-function Agendamento() {
+function Agendamento({  }) {
     const [formData, setFormData] = useState({
         inputCliente: '',
         inputBarbeiro: '',
@@ -18,8 +18,10 @@ function Agendamento() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        console.log(formData)
     };
+
+
 
     return (
         <main className="main-agendamento">
