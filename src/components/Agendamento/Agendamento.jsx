@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Agendamento.css"
+import "./Agendamento.css";
 
 function Agendamento() {
     const [formData, setFormData] = useState({
@@ -45,14 +45,18 @@ function Agendamento() {
                     <div className="div-form">
                         <label className="label-agendamento" htmlFor="inputBarbeiro">Nome do barbeiro:</label>
                         <br />
-                        <input
+                        <select
                             className="input-agendamento"
-                            type="text"
                             name="inputBarbeiro"
                             id="inputBarbeiro"
                             value={formData.inputBarbeiro}
                             onChange={handleChange}
-                        />
+                        >
+                            <option value="">Selecione um barbeiro</option>
+                            <option value="barbeiro1">Barbeiro 1</option>
+                            <option value="barbeiro2">Barbeiro 2</option>
+                            <option value="barbeiro3">Barbeiro 3</option>
+                        </select>
                     </div>
 
                     <div className="div-form">

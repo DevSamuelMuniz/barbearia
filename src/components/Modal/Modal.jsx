@@ -16,7 +16,7 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                     </div>
                     <div>
                         <input type="checkbox" id="corteBasico2" />
-                        <label htmlFor="corteBasico2">CORTE BÁSICO</label>
+                        <label htmlFor="corteBasico2">CORTE AVANÇADO</label>
                     </div>
                 </div>
                 <button onClick={closeModal}>FINALIZAR PROCEDIMENTO</button>
