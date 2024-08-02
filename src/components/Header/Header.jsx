@@ -40,6 +40,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
+            
                 <div className="exitNav">
                     <button onClick={handleLogout} className="sairNav">Sair</button>
                 </div>

@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import Registro from "./pages/Registro/Registro";
 import Home from "./pages/Home/Home";
 import AdicionarBarbeiro from "./pages/AdicionarBarbeiro/AdicionarBarbeiro";
+
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/home" element={<Home />} />
           <Route path="/barbeiros" element={<AdicionarBarbeiro />} />
         </Route>
+
       </Routes>
     </Router>
   );

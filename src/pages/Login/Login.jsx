@@ -80,16 +80,7 @@ function Login() {
                             />
                         </div>
 
-                        <div className="mb-3 loginInput">
-                            <input
-                                type="checkbox"
-                                id="rememberMe"
-                                checked={rememberMe}
-                                onChange={() => setRememberMe(!rememberMe)}
-                            />
-                            <label htmlFor="rememberMe" className="form-label">Lembrar-me</label>
-                        </div>
-                        
+                            
                         <button type="submit" className="btnLogin">Entrar</button>
                     </form>
                     <a href="/registro" className="link-registro">Faça seu cadastro aqui!</a>
