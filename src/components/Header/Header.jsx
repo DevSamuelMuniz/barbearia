@@ -1,39 +1,51 @@
 import React from "react";
-import "./Header.css"
+import { useNavigate } from "react-router-dom";
+import "./Header.css";
 // Imagem
 import Logo from '../../assets/img/logo1.png';
 
 function Header() {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Limpar token de autenticação
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
+        
+        // Redirecionar para a página de login
+        navigate('/');
+    };
+
     return (
         <main className="main-header">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container">
-                    <div class="container-fluid">
+                    <div className="container-fluid">
                         <a href="/home"><img src={Logo} alt="Logo" className="logoNav" /></a>
-                        <div class=" navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="link" aria-current="page" href="/home">INICIO</a>
-                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="link" href="/login" >AGENDA</a>
+                        <div className="navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link active" id="link" aria-current="page" href="/home">INICIO</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="link" href="/login" >FINANCEIRO</a>
+                                <li className="nav-item">
+                                    <a className="nav-link active" id="link" href="/login">AGENDA</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="link" href="/barbeiros" >BARBEIROS</a>
+                                <li className="nav-item">
+                                    <a className="nav-link active" id="link" href="/login">FINANCEIRO</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link active" id="link" href="/barbeiros">BARBEIROS</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="exitNav">
-                    <a href="/" className="sairNav">Sair</a> 
+                    <button onClick={handleLogout} className="sairNav">Sair</button>
                 </div>
             </nav>
         </main>
-    )
+    );
 }
 
 export default Header;

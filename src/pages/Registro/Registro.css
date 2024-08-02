@@ -61,3 +61,8 @@
     color: white;   
     background-color: #c98b40;
 }
+
+.error-message{
+    color: rgb(241, 0, 0);
+    font-weight: 600;
+}
