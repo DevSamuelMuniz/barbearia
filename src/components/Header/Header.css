@@ -64,7 +64,11 @@
     font-weight: bold;
     margin-right: 5rem;
     color: rgb(20, 20, 20);
+    border: none;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
+
+
 
 .sairNav:hover{
     color: rgb(95, 95, 95);

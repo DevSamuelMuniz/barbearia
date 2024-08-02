@@ -10,16 +10,9 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                 <p>{barbeiro}</p>
                 <p>{hora}</p>
                 <div className="procedimentos">
-                    <div>
-                        <input type="checkbox" id="corteBasico1" />
-                        <label htmlFor="corteBasico1">CORTE BÁSICO</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="corteBasico2" />
-                        <label htmlFor="corteBasico2">CORTE AVANÇADO</label>
-                    </div>
+                    
                 </div>
-                <button onClick={closeModal}>FINALIZAR PROCEDIMENTO</button>
+                <button onClick={closeModal} className="btn_modal">FINALIZAR PROCEDIMENTO</button>
             </div>
         </div>
     );
