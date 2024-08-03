@@ -13,12 +13,7 @@ function ProximosClientes() {
     const [currentIndex, setCurrentIndex] = useState(0);
     
     const dados = [
-        { nome: 'SAMUEL MUNIZ DA SILVA', barbeiro: 'BARB. MATHEUS', hora: '10:40' },
-        { nome: 'JOÃO DA SILVA', barbeiro: 'BARB. CARLOS', hora: '11:00' },
-        { nome: 'MARIA OLIVEIRA', barbeiro: 'BARB. PEDRO', hora: '11:30' },
-        { nome: 'ANA COSTA', barbeiro: 'BARB. JOÃO', hora: '12:00' },
-        { nome: 'LUIS SANTOS', barbeiro: 'BARB. LUCAS', hora: '12:30' },
-        { nome: 'CARLA FERREIRA', barbeiro: 'BARB. DIEGO', hora: '13:00' },
+        { nome: '', barbeiro: '', hora: '' }
     ];
 
     const itemsPerPage = 3;
