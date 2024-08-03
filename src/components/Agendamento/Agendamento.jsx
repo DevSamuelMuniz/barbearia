@@ -75,7 +75,7 @@ function Agendamento() {
                         />
                     </div>
 
-                    <button className="btn-agendamento">AGENDAR</button>
+                    <button className="btn-agendamento" type="submit">AGENDAR</button>
                 </form>
             </div>
         </main>
