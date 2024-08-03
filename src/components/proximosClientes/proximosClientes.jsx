@@ -40,7 +40,7 @@ function ProximosClientes() {
                 </div>
             </div>
 
-            <div className="card-ctn">
+            <div className="card-ctn scroll">
                 {selectedCards.map((card, index) => (
                     <CardPc
                         key={index}
