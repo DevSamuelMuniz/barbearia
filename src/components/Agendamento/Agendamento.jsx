@@ -1,26 +1,27 @@
 import { useState } from "react";
 import "./Agendamento.css";
+import axios from "axios";
 
-function Agendamento({  }) {
-    const [formData, setFormData] = useState({
-        inputCliente: '',
-        inputBarbeiro: '',
-        inputHorario: ''
-    });
+function Agendamento() {
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
-    };
+    const [nomeCliente, setNomeCliente] = useState("");
+    const [nomeBarbeiro, setNomeBarbeiro] = useState("");
+    const [horarioMarcado, setHorarioMarcado] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
-    };
 
+        try{
+            const response = await axios.post('http://localhost:5000/api/agendamento', {
+                nomeCliente,
+                nomeBarbeiro,
+                horarioMarcado
+            });
+            console.log(response.data);
+        } catch (error){
+            console.log('Erro ao adicionar agendamento:', error)
+        }
+    };
 
 
     return (
@@ -30,7 +31,7 @@ function Agendamento({  }) {
             </div>
 
             <div className="card-ctn">
-                <form className="form-agendamento" onSubmit={handleSubmit}>
+                <form className="form-agendamento">
                     <div className="div-form">
                         <label className="label-agendamento" htmlFor="inputCliente">Nome do cliente:</label>
                         <br />
@@ -39,8 +40,8 @@ function Agendamento({  }) {
                             type="text"
                             name="inputCliente"
                             id="inputCliente"
-                            value={formData.inputCliente}
-                            onChange={handleChange}
+                            value={nomeCliente}
+                            onChange={(e) => setNomeCliente(e.target.value)}
                         />
                     </div>
 
@@ -51,8 +52,8 @@ function Agendamento({  }) {
                             className="input-agendamento"
                             name="inputBarbeiro"
                             id="inputBarbeiro"
-                            value={formData.inputBarbeiro}
-                            onChange={handleChange}
+                            value={nomeBarbeiro}
+                            onChange={(e) => setNomeBarbeiro(e.target.value)}
                         >
                             <option value="">Selecione um barbeiro</option>
                             <option value="barbeiro1">Barbeiro 1</option>
@@ -69,8 +70,8 @@ function Agendamento({  }) {
                             type="datetime-local"
                             name="inputHorario"
                             id="inputHorario"
-                            value={formData.inputHorario}
-                            onChange={handleChange}
+                            value={horarioMarcado}
+                            onChange={(e) => setHorarioMarcado(e.target.value)}
                         />
                     </div>
 
