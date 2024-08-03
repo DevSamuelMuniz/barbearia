@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./Agendamento.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Agendamento() {
 
+function Agendamento() {
+    const navigate = useNavigate();
     const [nomeCliente, setNomeCliente] = useState("");
     const [nomeBarbeiro, setNomeBarbeiro] = useState("");
     const [horarioMarcado, setHorarioMarcado] = useState("");
@@ -17,7 +19,8 @@ function Agendamento() {
                 nomeBarbeiro,
                 horarioMarcado
             });
-            console.log(response.data);
+            alert(response.data.message);
+            navigate('/'); // Redireciona após o registro bem-sucedido
         } catch (error){
             console.log('Erro ao adicionar agendamento:', error)
         }
