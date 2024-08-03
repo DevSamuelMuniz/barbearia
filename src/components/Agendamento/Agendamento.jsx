@@ -31,7 +31,7 @@ function Agendamento() {
             </div>
 
             <div className="card-ctn">
-                <form className="form-agendamento">
+                <form className="form-agendamento" onSubmit={handleSubmit}>
                     <div className="div-form">
                         <label className="label-agendamento" htmlFor="inputCliente">Nome do cliente:</label>
                         <br />
