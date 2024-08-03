@@ -56,3 +56,13 @@
     border-radius: .5rem;
     padding: 0.4rem 2rem;
 }
+
+.card-ctn {
+    max-height: 400px; 
+    overflow-y: auto; 
+    margin: 20px 0; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+}
