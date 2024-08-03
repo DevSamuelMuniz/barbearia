@@ -51,10 +51,6 @@ function ProximosClientes() {
                 ))}
             </div>
 
-            <div className="pagination-buttons">
-                <button className="btn-next" onClick={handlePrev} disabled={currentIndex === 0}>Anterior</button>
-                <button className="btn-next" onClick={handleNext} disabled={currentIndex === totalPages - 1}>Próximo</button>
-            </div>
         </main>
     )
 }
