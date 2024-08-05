@@ -19,54 +19,63 @@ header {
     justify-content: center;
     width: 100%;
     height: calc(100vh - 8rem);
-    padding: 2% 22%;
-    background-color: white;
+    padding: 2% 30%;
 }
 
 .bg-procedimentos {
-    background-color:  rgba(255, 255, 255, 0.349);
+    background-color:  rgb(255, 255, 255);
     width: 70%;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 40rem;
     gap: 5rem;
-    
+    margin-top: 2rem;
     -webkit-box-shadow: 6px 13px 17px 2px rgba(133, 133, 133, 0.82);
     -moz-box-shadow: 6px 13px 17px 2px rgba(133, 133, 133, 0.82);
     box-shadow: 6px 13px 17px 2px rgba(133, 133, 133, 0.82);
 }
 
 .h1-procedimentos {
-    color: rgb(71, 71, 71);
+    color: rgb(56, 56, 56);
+    font-size: 2rem;
 }
 
 .form-procedimentos{
     width: 30rem;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 
 .btn-procedimentos {
-    background-color:  rgba(255, 255, 255, 0.349);
-    padding: 2%;
-    width: 70%;
-    border-radius: 1rem;
-    margin-left: 13%;
-    margin-top: 5rem;
-    border: 2px solid #b1680e;
-    background-color: #E18B22;
     color: white;
-    transition: 0.2s ease-in-out;
-    font-weight: bold;
+    background-color: #E18B22;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out ;
+    padding: 2% 18%;
+    margin-top: 2rem;
+    width: 16.5rem;
+    margin-left: 6.8rem;
 }
 
 .btn-procedimentos:hover{
     background-color: white;
     color: #E18B22;
 }
+
+.procedimentos-input{
+    margin-left: 2rem;
+    width: 26rem;
+}
+
+
 
 
 
