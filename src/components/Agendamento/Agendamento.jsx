@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Agendamento.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
 
 function Agendamento() {
     const navigate = useNavigate();
     const [nomeCliente, setNomeCliente] = useState("");
     const [nomeBarbeiro, setNomeBarbeiro] = useState("");
     const [horarioMarcado, setHorarioMarcado] = useState("");
+    const [barbeiros, setBarbeiros] = useState([]);
+
+    // Fetch barbeiros when the component mounts
+    useEffect(() => {
+        const fetchBarbeiros = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/api/barbeiros');
+                setBarbeiros(response.data);
+            } catch (error) {
+                console.log('Erro ao buscar barbeiros:', error);
+            }
+        };
+
+        fetchBarbeiros();
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try{
+        try {
             const response = await axios.post('http://localhost:5000/api/agendamento', {
                 nomeCliente,
                 nomeBarbeiro,
@@ -21,11 +35,10 @@ function Agendamento() {
             });
             alert(response.data.message);
             navigate('/'); // Redireciona após o registro bem-sucedido
-        } catch (error){
+        } catch (error) {
             console.log('Erro ao adicionar agendamento:', error)
         }
     };
-
 
     return (
         <main className="main-agendamento">
@@ -59,9 +72,11 @@ function Agendamento() {
                             onChange={(e) => setNomeBarbeiro(e.target.value)}
                         >
                             <option value="">Selecione um barbeiro</option>
-                            <option value="barbeiro1">Barbeiro 1</option>
-                            <option value="barbeiro2">Barbeiro 2</option>
-                            <option value="barbeiro3">Barbeiro 3</option>
+                            {barbeiros.map(barbeiro => (
+                                <option key={barbeiro.id} value={barbeiro.nomeBarbeiro}>
+                                    {barbeiro.nomeBarbeiro}
+                                </option>
+                            ))}
                         </select>
                     </div>
 
