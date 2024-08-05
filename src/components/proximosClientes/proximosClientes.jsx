@@ -17,16 +17,6 @@ function ProximosClientes() {
     ];
 
     const itemsPerPage = 3;
-    const totalPages = Math.ceil(dados.length / itemsPerPage);
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
-    };
-
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, totalPages - 1));
-    };
-
     const startIndex = currentIndex * itemsPerPage;
     const selectedCards = dados.slice(startIndex, startIndex + itemsPerPage);
 
