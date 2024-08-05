@@ -5,18 +5,21 @@ import Header from "../../components/Header/Header";
 
 function Procedimentos() {
     const [procedimento, setProcedimento] = useState("");
+    const [valor, setValor] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const response = await axios.post("http://localhost:5000/api/procedimentos", {
-                procedimento
+                procedimento,
+                valor
             });
 
             if (response.status === 201) {
                 alert("Procedimento adicionado com sucesso!");
                 setProcedimento(""); // Limpa o campo de entrada após o envio
+                setValor("");
             } else {
                 alert("Erro ao adicionar procedimento.");
             }
@@ -44,6 +47,16 @@ function Procedimentos() {
                                 placeholder="Digite os procedimentos aqui"
                                 value={procedimento}
                                 onChange={(e) => setProcedimento(e.target.value)}
+                            />
+
+                            <label htmlFor="text" className="form-label">Valor:</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="valor"
+                                placeholder="Digite o valor aqui"
+                                value={valor}
+                                onChange={(e) => setValor(e.target.value)}
                             />
                         </div>
                         <button type="submit" className="btn-procedimentos">Adicionar</button>

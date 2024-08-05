@@ -5,18 +5,17 @@ import "./Modal.css";
 function Modal({ nome, barbeiro, hora, closeModal }) {
     const [procedimentos, setProcedimentos] = useState([]);
 
+
     useEffect(() => {
-        fetchProcedimentos();
+        axios.get('http://localhost:5000/api/procedimentos-get')
+            .then(response => {
+                setProcedimentos(response.data);
+            })
+            .catch(error => {
+                console.error("Erro ao buscar procedimentos:", error);
+            });
     }, []);
 
-    const fetchProcedimentos = async () => {
-        try {
-            const response = await axios.get('http://localhost:5000/api/procedimentos');
-            setProcedimentos(response.data);
-        } catch (error) {
-            console.error("Erro ao buscar procedimentos:", error);
-        }
-    };
 
     return (
         <div className="modal-overlay">
@@ -28,11 +27,18 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
 
                 <div className="procedimentos">
                     <h2>Lista de Procedimentos:</h2>
-                    <ul>
-                        {procedimentos.map((procedimento, index) => (
-                            <li key={index}>{procedimento.procedimento}</li>
-                        ))}
-                    </ul>
+                    {procedimentos.map(procedimento => (
+                        <div key={procedimento.id} className="procedimento-item">
+                            <input
+                                type="checkbox"
+                            />
+                            <label >
+                                {procedimento.procedimento} R$
+                                {procedimento.valor}
+                            </label>
+                        
+                        </div>
+                    ))}
                 </div>
 
                 <button onClick={closeModal} className="btn_modal">FINALIZAR PROCEDIMENTO</button>

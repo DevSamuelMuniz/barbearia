@@ -66,6 +66,7 @@ function CardPc() {
                     nome={selectedAgendamento.nomeCliente}
                     barbeiro={selectedAgendamento.nomeBarbeiro}
                     hora={selectedAgendamento.horarioMarcado}
+                    procedimentos={selectedAgendamento.procedimentos}
                     closeModal={closeModal}
                 />
             )}
