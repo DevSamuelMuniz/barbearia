@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 //css
 import "./CardPc.css";
@@ -11,6 +12,8 @@ function CardPc() {
     const [agendamentos, setAgendamentos] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedAgendamento, setSelectedAgendamento] = useState(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/agendamentos')
@@ -28,7 +31,7 @@ function CardPc() {
     };
 
     const closeModal = () => {
-        setIsModalOpen(false);
+        navigate('/')
     };
 
     useEffect(() => {
