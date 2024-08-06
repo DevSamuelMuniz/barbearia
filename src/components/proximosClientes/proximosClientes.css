@@ -16,7 +16,7 @@
     box-shadow: 6px 13px 17px 2px rgba(133, 133, 133, 0.82);
 }
 
-.ctn-filtro{
+.ctn-filtro {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,7 @@
     color: rgb(71, 71, 71);
 }
 
-.filtro-pc{
+.filtro-pc {
     color: white;
     background-color: #E18B22;
     margin: .4rem 0;
@@ -38,18 +38,18 @@
     transition: .2s ease-in-out;
 }
 
-.filtro-pc:hover{
+.filtro-pc:hover {
     background-color: #df9842;
 }
 
-.pagination-buttons{
+.pagination-buttons {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.btn-next{
+.btn-next {
     background-color: #E18B22;
     color: white;
     border: none;
@@ -58,12 +58,11 @@
 }
 
 .scroll {
-    overflow-y: auto; 
-    margin: 20px 0; 
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    border-radius: 8px; 
-
+    overflow-y: auto;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     height: 100%;
 }

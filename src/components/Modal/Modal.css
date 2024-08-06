@@ -5,20 +5,33 @@
     transform: translate(-50%, -50%);
 
     width: 70%;
-    height: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #303030;
-    color: #000000;
+    color: white;
     border-radius: 1rem;
+}
+
+.x {
+    position: absolute;
+    right: 6rem;
+    display: flex;
+    border: none;
+    background-color: #303030;
+    color: white;
 }
 
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
+    text-align: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .procedimentos {
@@ -26,7 +39,7 @@
 }
 
 .procedimentos div {
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 
 .btn_modal {
@@ -41,4 +54,75 @@
 
 .btn_modal:hover {
     background: #d48d36;
+}
+
+.cnt-procedimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+
+.right-infos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    text-align: left;
+}
+
+.procedimento-h1 {
+    border-right: 2px solid white;
+    padding-right: 2rem;
+}
+
+.procedimento-h1>h1 {
+    font-size: 2rem;
+}
+
+
+.procedimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 1rem 0;
+}
+
+.procedimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 3rem;
+}
+
+.procedimento-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    border: 1px solid white;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    width: 18rem;
+    height: 5rem;
+}
+
+.procedimento-item input[type="checkbox"] {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+}
+
+.btn-valorTotal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-valorTotal > h2 {
+    position: absolute;
+    right: 16rem;
+    font-size: 1.4rem;
 }
