@@ -87,7 +87,7 @@
 .procedimentos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem 3rem;
+    gap: 1rem 0;
     justify-items: center;
     align-items: center;
 }
