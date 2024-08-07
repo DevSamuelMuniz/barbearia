@@ -34,12 +34,12 @@ function Procedimentos() {
             <div>
                 <Header />
             </div>
-            <div className="ctn-procedimentos">
+            <div className="container-procedimentos">
                 <div className="bg-procedimentos">
-                    <h1 className="h1-procedimentos">PROCEDIMENTOS</h1>
-                    <form className="form-procedimentos" onSubmit={handleSubmit}>
-                        <div className="mb-3 procedimentos-input">
-                            <label htmlFor="text" className="form-label">Procedimentos:</label>
+                <h1 className="h1-procedimentos">PROCEDIMENTOS</h1>
+                <form className="form-procedimentos" onSubmit={handleSubmit}>
+                    <div className="mb-3 add-procedimentos">
+                    <label htmlFor="text" className="form-label">Procedimentos:</label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -48,7 +48,9 @@ function Procedimentos() {
                                 value={procedimento}
                                 onChange={(e) => setProcedimento(e.target.value)}
                             />
+                        </div>
 
+                        <div className="mb-3 addBarbeInput last">
                             <label htmlFor="text" className="form-label">Valor:</label>
                             <input
                                 type="text"
@@ -64,6 +66,8 @@ function Procedimentos() {
                 </div>
             </div>
         </main>
+
+        
     );
 }
 
