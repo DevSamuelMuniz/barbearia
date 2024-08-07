@@ -5,7 +5,6 @@ import "./Modal.css";
 function Modal({ nome, barbeiro, hora, closeModal }) {
     const [procedimentos, setProcedimentos] = useState([]);
 
-
     useEffect(() => {
         axios.get('http://localhost:5000/api/procedimentos-get')
             .then(response => {
@@ -16,37 +15,30 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
             });
     }, []);
 
-
     return (
         <div className="modal-overlay">
             <div className="modal-content">
                 <div className="cnt-procedimento">
-
-
                     <div className="procedimento-h1">
                         <h1>PROCEDIMENTOS</h1>
                     </div>
-
-
                     <div className="right-infos">
                         <div>
                             <p><strong>Cliente:</strong> {nome}</p>
                             <p><strong>Barbeiro:</strong> {barbeiro}</p>
                         </div>
-
                         <div>
                             <p><strong>Horário:</strong> {hora}</p>
                         </div>
                     </div>
                     <button onClick={closeModal} className="x">
-                        <h1 className="x-h1">
-                            X
-                        </h1>
+                        <h1 className="x-h1">X</h1>
                     </button>
                 </div>
 
+                <h2>Lista de Procedimentos</h2>
+                
                 <div className="procedimentos">
-                    <h2>Lista de Procedimentos</h2>
                     <div className="procedimentos-grid">
                         {procedimentos.map(procedimento => (
                             <div key={procedimento.id} className="procedimento-item">
@@ -54,8 +46,7 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                                     type="checkbox"
                                 />
                                 <label>
-                                    {procedimento.procedimento} <br /> R$
-                                    {procedimento.valor}
+                                    {procedimento.procedimento} <br /> R${procedimento.valor}
                                 </label>
                             </div>
                         ))}
@@ -63,7 +54,7 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                 </div>
                 <div className="btn-valorTotal">
                     <button className="btn_modal">FINALIZAR ATENDIMENTO</button>
-                    <h2>valor total: R$ { }</h2>
+                    <h2>Valor total: R$ { }</h2>
                 </div>
             </div>
         </div>
