@@ -4,6 +4,8 @@ import "./Modal.css";
 
 function Modal({ nome, barbeiro, hora, closeModal }) {
     const [procedimentos, setProcedimentos] = useState([]);
+    const [selectedProcedimentos, setSelectedProcedimentos] = useState([]);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/procedimentos-get')
@@ -14,6 +16,39 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                 console.error("Erro ao buscar procedimentos:", error);
             });
     }, []);
+
+    const handleSelectProcedimento = (procedimento) => {
+        const alreadySelected = selectedProcedimentos.find(p => p.id === procedimento.id);
+
+        let updateSelected;
+        if(alreadySelected) {
+            updateSelected = selectedProcedimentos.filter(p => p.id !== procedimento.id);
+        } else {
+            updateSelected = [...selectedProcedimentos, procedimento];
+        }
+
+        setSelectedProcedimentos(updateSelected);
+
+        const newTotal = updateSelected.reduce((acc, p) => acc + parseFloat(p.valor), 0);
+        setTotal(newTotal);
+    }
+
+    const hadleSubmit = () =>{
+        axios.post('http://localhost:5000/api/store-procedimentos', {
+            nomeCliente: nome,
+            nomeBarbeiro: barbeiro,
+            horarioMarcado: hora,
+            procedimentos: selectedProcedimentos,
+            total
+        })
+        .then(() => {
+            closeModal();
+        })
+        .catch(error => {
+            console.log('Erro ao enviar dados', error);
+        });
+    }
+
 
     return (
         <div className="modal-overlay">
@@ -44,6 +79,8 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                             <div key={procedimento.id} className="procedimento-item">
                                 <input
                                     type="checkbox"
+                                    onChange={() => handleSelectProcedimento(procedimento)}
+                                    checked={selectedProcedimentos.some(p => p.id === procedimento.id)}
                                 />
                                 <label>
                                     {procedimento.procedimento} <br /> R${procedimento.valor}
@@ -53,8 +90,8 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
                     </div>
                 </div>
                 <div className="btn-valorTotal">
-                    <button className="btn_modal">FINALIZAR ATENDIMENTO</button>
-                    <h2>Valor total: R$ { }</h2>
+                    <button className="btn_modal" onClick={hadleSubmit}>FINALIZAR ATENDIMENTO</button>
+                    <h2>Valor total: R$ {total.toFixed(2)}</h2>
                 </div>
             </div>
         </div>
