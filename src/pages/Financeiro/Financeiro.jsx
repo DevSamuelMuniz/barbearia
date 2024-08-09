@@ -8,13 +8,13 @@ import Header from "../../components/Header/Header";
 function Financeiro() {
     const navigate = useNavigate();
 
-    const [agendamentos, setAgendamentos] = useState([]);
+    const [financeiros, setFinanceiros] = useState([]);
     const [selectedAgendamento, setSelectedAgendamento] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/agendamentos')
+        axios.get('http://localhost:5000/api/financeiros')
             .then(response => {
-                setAgendamentos(response.data);
+                setFinanceiros(response.data);
             })
             .catch(error => {
                 console.error("There was an error fetching the data!", error);
@@ -48,20 +48,20 @@ function Financeiro() {
             </div>
 
             <div className="card-financeiro">
-                {agendamentos.map((agendamento) => (
+                {financeiros.map((financeiro) => (
                     <div className="container-card-financeiro">
                         <div className="card-left">
-                            <h1 className="nome-card-financeiro">{agendamento.nomeCliente}</h1>
-                            <h2 className="barbeiro-card">{agendamento.nomeBarbeiro}</h2>
+                            <h1 className="nome-card-financeiro">{financeiro.nomeCliente}</h1>
+                            <h2 className="barbeiro-card">{financeiro.nomeBarbeiro}</h2>
                         </div>
 
                         <div className="card-mid">
-                            <h2 className="hora-card-financeiro">{formatDateTime(agendamento.horarioMarcado)}</h2>
+                            <h2 className="hora-card-financeiro">{formatDateTime(financeiro.horarioMarcado)}</h2>
                         </div>
 
                         <div className="card-right">
                             <h2 className="total-card-financeiro">TOTAL:</h2>
-                            <h2 className="valor-card-financeiro">R$ 350,40</h2>
+                            <h2 className="valor-card-financeiro">R${financeiro.valorTotal},00</h2>
                         </div>
                     </div>
                 ))}
