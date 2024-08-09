@@ -55,12 +55,22 @@
 }
 
 
-.valor-card-financeiro {
+.valor-card-finalizado {
     font-size: 1.2rem;
-    background-color: #E18B22;
+    background-color: #c73333;
     padding: 0.3rem 1.5rem;
     border-radius: .3rem;
     color: white;
+    margin: 0;
+}
+
+.valor-card-procedimento {
+    font-size: 1.2rem;
+    background-color: #1fa035;
+    padding: 0.3rem 1.5rem;
+    border-radius: .3rem;
+    color: white;
+    margin: 0;
 }
 
 .card-financeiro {

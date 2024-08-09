@@ -9,12 +9,21 @@ function Agenda() {
     const navigate = useNavigate();
 
     const [financeiros, setFinanceiros] = useState([]);
+    const [agendamento, setAgendamento] = useState([]);
     const [selectedAgendamento, setSelectedAgendamento] = useState(null);
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/financeiros')
             .then(response => {
                 setFinanceiros(response.data);
+            })
+            .catch(error => {
+                console.error("There was an error fetching the data!", error);
+            });
+
+            axios.get('http://localhost:5000/api/agendamento')
+            .then(response => {
+                setAgendamento(response.data);
             })
             .catch(error => {
                 console.error("There was an error fetching the data!", error);
@@ -55,8 +64,24 @@ function Agenda() {
                         </div>
 
                         <div className="card-right">
-                            <h2 className="total-card-financeiro">TOTAL:</h2>
-                            <h2 className="valor-card-financeiro">R${financeiro.valorTotal},00</h2>
+                            <h2 className="valor-card-finalizado">FINALIZADO</h2>
+                        </div>
+                    </div>
+                ))}
+                
+                {financeiros.map((financeiro) => (
+                    <div className="container-card-financeiro">
+                        <div className="card-left">
+                            <h1 className="nome-card-financeiro">{financeiro.nomeCliente}</h1>
+                            <h2 className="barbeiro-card">{financeiro.nomeBarbeiro}</h2>
+                        </div>
+
+                        <div className="card-mid">
+                            <h2 className="hora-card-financeiro">{formatDateTime(financeiro.horarioMarcado)}</h2>
+                        </div>
+
+                        <div className="card-right">
+                            <h2 className="valor-card-finalizado">FINALIZADO</h2>
                         </div>
                     </div>
                 ))}
