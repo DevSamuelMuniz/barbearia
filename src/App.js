@@ -11,7 +11,7 @@ import Home from "./pages/Home/Home";
 import AdicionarBarbeiro from "./pages/AdicionarBarbeiro/AdicionarBarbeiro";
 import Financeiro from "./pages/Financeiro/Financeiro";
 import Procedimentos from "./pages/Procedimentos/Procedimentos";
-// import Agenda from './pages/';
+import Agenda from "./pages/Agenda/Agenda";
 
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -27,7 +27,7 @@ function App() {
           <Route path="/barbeiros" element={<AdicionarBarbeiro />} />
           <Route path="/financeiro" element={<Financeiro />} />
           <Route path="/procedimentos" element={<Procedimentos />} />
-          {/* <Route path="/agenda" element={<Agenda />} /> */}
+          <Route path="/agenda" element={<Agenda />} />
         </Route>
 
       </Routes>

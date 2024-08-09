@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import "./Financeiro.css"
+import "./Agenda.css"
 import Header from "../../components/Header/Header";
 
-function Financeiro() {
+function Agenda() {
     const navigate = useNavigate();
 
     const [financeiros, setFinanceiros] = useState([]);
@@ -22,6 +22,7 @@ function Financeiro() {
     }, []);
 
     const formatDateTime = (dateTime) => {
+        console.log(dateTime)
         return dateTime;
     };
 
@@ -34,7 +35,7 @@ function Financeiro() {
             </div>
 
             <div className="container-financeiro">
-                <h1 className="title-financeiro">FINANCEIRO</h1>
+                <h1 className="title-financeiro">Todos os Clientes</h1>
                 <div className="ctn-filtro ctn-financeiro">
                     <div className="filtro-pc">10/04/2001</div>
                     <div className="filtro-pc">MAIS RECENTE</div>
@@ -64,4 +65,4 @@ function Financeiro() {
     );
 }
 
-export default Financeiro
+export default Agenda
