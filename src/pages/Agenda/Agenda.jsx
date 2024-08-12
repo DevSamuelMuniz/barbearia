@@ -29,6 +29,10 @@ function Agenda() {
 
     }, []);
 
+    const formatDateTime = (dateTime) => {
+        console.log(dateTime)
+        return dateTime;
+    };
 
 
 
@@ -56,7 +60,7 @@ function Agenda() {
                 </div>
 
                 <div className="card-mid">
-                    <h2 className="hora-card-financeiro">{agendamento.horarioMarcado}</h2>
+                    <h2 className="hora-card-financeiro">{formatDateTime(agendamento.horarioMarcado)}</h2>
                 </div>
 
                 <div className="card-right">

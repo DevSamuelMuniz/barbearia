@@ -48,16 +48,6 @@ function CardPc() {
         };
     }, []);
 
-    const formatDateTime = (dateTime) => {
-        const date = new Date(dateTime);
-        const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const year = date.getFullYear();
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        return `${day}/${month}/${year} ${hours}:${minutes}`;
-    };
-
     return (
         <div>
             {agendamentos.map((agendamento) => (
@@ -68,7 +58,7 @@ function CardPc() {
                     </div>
 
                     <div className="card-right">
-                        <h2 className="hora-card">{formatDateTime(agendamento.horarioMarcado)}</h2>
+                        <h2 className="hora-card">{agendamento.horarioMarcado}</h2>
                         <button className="btn-card" onClick={() => openModal(agendamento)}>FINALIZAR</button>
                     </div>
                 </main>
@@ -79,7 +69,7 @@ function CardPc() {
                     agendamento_id ={selectedAgendamento.id}
                     nome={selectedAgendamento.nomeCliente}
                     barbeiro={selectedAgendamento.nomeBarbeiro}
-                    hora={formatDateTime(selectedAgendamento.horarioMarcado)}
+                    hora={selectedAgendamento.horarioMarcado}
                     procedimentos={selectedAgendamento.procedimentos}
                     closeModal={closeModal}
                 />
