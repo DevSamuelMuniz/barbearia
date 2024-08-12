@@ -6,9 +6,7 @@ import Header from "../../components/Header/Header";
 
 function Financeiro() {
 
-
     const [financeiros, setFinanceiros] = useState([]);
-
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/financeiros')
@@ -19,6 +17,8 @@ function Financeiro() {
                 console.error("There was an error fetching the data!", error);
             });
     }, []);
+
+
 
 
     return (
