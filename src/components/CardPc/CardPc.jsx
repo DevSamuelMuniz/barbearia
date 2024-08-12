@@ -76,6 +76,7 @@ function CardPc() {
 
             {isModalOpen && selectedAgendamento && (
                 <Modal 
+                    agendamento_id ={selectedAgendamento.id}
                     nome={selectedAgendamento.nomeCliente}
                     barbeiro={selectedAgendamento.nomeBarbeiro}
                     hora={formatDateTime(selectedAgendamento.horarioMarcado)}

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 import "./Financeiro.css"
 import Header from "../../components/Header/Header";
 
 function Financeiro() {
-    const navigate = useNavigate();
+
 
     const [financeiros, setFinanceiros] = useState([]);
-    const [selectedAgendamento, setSelectedAgendamento] = useState(null);
+
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/financeiros')
@@ -20,11 +19,6 @@ function Financeiro() {
                 console.error("There was an error fetching the data!", error);
             });
     }, []);
-
-    const formatDateTime = (dateTime) => {
-        return dateTime;
-    };
-
 
 
     return (
@@ -50,7 +44,7 @@ function Financeiro() {
                         </div>
 
                         <div className="card-mid">
-                            <h2 className="hora-card-financeiro">{formatDateTime(financeiro.horarioMarcado)}</h2>
+                            <h2 className="hora-card-financeiro">{financeiro.horarioMarcado}</h2>
                         </div>
 
                         <div className="card-right">

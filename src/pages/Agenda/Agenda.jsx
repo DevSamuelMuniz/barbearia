@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 import "./Agenda.css"
 import Header from "../../components/Header/Header";
 
 function Agenda() {
-    const navigate = useNavigate();
 
     const [financeiros, setFinanceiros] = useState([]);
-    const [agendamento, setAgendamento] = useState([]);
-    const [selectedAgendamento, setSelectedAgendamento] = useState(null);
+    const [agendamentos, setAgendamentos] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/financeiros')
@@ -21,19 +18,17 @@ function Agenda() {
                 console.error("There was an error fetching the data!", error);
             });
 
-            axios.get('http://localhost:5000/api/agendamento')
+
+        axios.get('http://localhost:5000/api/agendamentos')
             .then(response => {
-                setAgendamento(response.data);
+                setAgendamentos(response.data);
             })
             .catch(error => {
                 console.error("There was an error fetching the data!", error);
             });
+
     }, []);
 
-    const formatDateTime = (dateTime) => {
-        console.log(dateTime)
-        return dateTime;
-    };
 
 
 
@@ -52,6 +47,25 @@ function Agenda() {
             </div>
 
             <div className="card-financeiro">
+
+            {agendamentos.map((agendamento) => (
+                <div className="container-card-financeiro">
+                <div className="card-left">
+                    <h1 className="nome-card-financeiro">{agendamento.nomeCliente}</h1>
+                    <h2 className="barbeiro-card">{agendamento.nomeBarbeiro}</h2>
+                </div>
+
+                <div className="card-mid">
+                    <h2 className="hora-card-financeiro">{agendamento.horarioMarcado}</h2>
+                </div>
+
+                <div className="card-right">
+                    <h2 className="valor-card-procedimento">EM PROCESSO</h2>
+                </div>
+            </div>
+            ))}
+
+
                 {financeiros.map((financeiro) => (
                     <div className="container-card-financeiro">
                         <div className="card-left">
@@ -60,7 +74,7 @@ function Agenda() {
                         </div>
 
                         <div className="card-mid">
-                            <h2 className="hora-card-financeiro">{formatDateTime(financeiro.horarioMarcado)}</h2>
+                            <h2 className="hora-card-financeiro">{financeiro.horarioMarcado}</h2>
                         </div>
 
                         <div className="card-right">
@@ -68,23 +82,8 @@ function Agenda() {
                         </div>
                     </div>
                 ))}
-                
-                {financeiros.map((financeiro) => (
-                    <div className="container-card-financeiro">
-                        <div className="card-left">
-                            <h1 className="nome-card-financeiro">{financeiro.nomeCliente}</h1>
-                            <h2 className="barbeiro-card">{financeiro.nomeBarbeiro}</h2>
-                        </div>
 
-                        <div className="card-mid">
-                            <h2 className="hora-card-financeiro">{formatDateTime(financeiro.horarioMarcado)}</h2>
-                        </div>
 
-                        <div className="card-right">
-                            <h2 className="valor-card-finalizado">FINALIZADO</h2>
-                        </div>
-                    </div>
-                ))}
             </div>
         </main>
     );

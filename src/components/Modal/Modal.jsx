@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Modal.css";
 
-function Modal({ nome, barbeiro, hora, closeModal }) {
+function Modal({ agendamento_id, nome, barbeiro, hora, closeModal }) {
     const [procedimentos, setProcedimentos] = useState([]);
     const [selectedProcedimentos, setSelectedProcedimentos] = useState([]);
     const [total, setTotal] = useState(0);
@@ -35,6 +35,7 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
 
     const hadleSubmit = () =>{
         axios.post('http://localhost:5000/api/store-procedimentos', {
+            agendamento_id: agendamento_id,
             nomeCliente: nome,
             nomeBarbeiro: barbeiro,
             horarioMarcado: hora,
@@ -42,7 +43,13 @@ function Modal({ nome, barbeiro, hora, closeModal }) {
             total
         })
         .then(() => {
-            closeModal();
+            axios.delete(`http://localhost:5000/api/delete-agendamento/${agendamento_id}`)
+            .then(() => {
+                closeModal();
+            })
+            .catch(error => {
+                console.log("Erro ao tentar excluir procedimento!", error)
+            })
         })
         .catch(error => {
             console.log('Erro ao enviar dados', error);
