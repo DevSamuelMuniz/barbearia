@@ -12,10 +12,8 @@ function Login() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Verifica se há um token no localStorage ou sessionStorage
         const token = localStorage.getItem('token') || sessionStorage.getItem('token');
         if (token) {
-            // Se houver token, redireciona para a página inicial
             navigate('/home');
         }
     }, [navigate]);
@@ -80,7 +78,13 @@ function Login() {
                             />
                         </div>
 
-                            
+                        {/* Condicional para exibir a mensagem de erro */}
+                        {error && (
+                            <div className="error-message">
+                                {error}
+                            </div>
+                        )}
+                        
                         <button type="submit" className="btnLogin">Entrar</button>
                     </form>
                     <a href="/registro" className="link-registro">Faça seu cadastro aqui!</a>
