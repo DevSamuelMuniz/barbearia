@@ -1,4 +1,4 @@
-.main-login {
+.main-register {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -11,7 +11,6 @@
     width: 40%;
     display: flex;
     justify-content: center;
-
 }
 
 .col-right {
@@ -23,25 +22,40 @@
     background-color: #E18B22;
 }
 
-.formLogin {
-    width: 30rem;
+.formRegister {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-.bg-login {
-    background-color:  rgba(255, 255, 255, 0.349);
-    padding: 12% 20%;
+.bg-register {
+    background-color: rgba(255, 255, 255, 0.349);
     width: 70%;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1rem;
 }
 
-.h1-login {
+.h1-register {
     color: white;
+}
+
+.registerInput {
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
 }
 
 .btnRegistro{
@@ -54,15 +68,63 @@
     transition: 0.3s ease-in-out ;
     padding: 2% 18%;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.btnRegistro:hover{
-    transition: 0.3s;
+.btnregister:hover{
     color: white;   
     background-color: #c98b40;
 }
 
-.error-message{
-    color: rgb(241, 0, 0);
-    font-weight: 600;
+.form-label {
+    color: white;
+}
+
+.link-registro {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.link-registro:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+@media screen and (max-width: 700px) {
+
+    .main-register {
+        flex-direction: column-reverse;
+    }  
+      
+    .col-left {
+        height: 20%;
+    }
+
+    .col-right {
+        height: 80%;
+        width: 100%;
+    }
+
+    .bg-register {
+        width: 90%;
+    }
+
+}
+
+
+@media screen and  (max-height: 750px) {
+
+    .h1-register{
+        font-size: 1.2rem;
+    }   
+
+    .link-registro {
+        padding: 0;
+    }
+
+    .bg-register {
+        scale: 0.9;
+}
 }
