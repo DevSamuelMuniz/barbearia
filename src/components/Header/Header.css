@@ -4,28 +4,72 @@
     box-shadow: 7px 28px 26px -27px rgba(133, 133, 133, 0.164);
 }
 
-.container-fluid {
+.container-nav{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.container-fluid{
+    display: flex;
+}
+
+.logoNav{
+    width: 4.5rem;
+    margin-left: 5rem;
+}
+
+.container-ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.a-nav{
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+}
+
+
+.exitNav {
+    margin-left: 2rem;
+    height: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 7rem;
-
 }
 
-
-.logoNav {
-    width: 4rem;
-    height: auto;
-    margin-right: 2rem;
+.sairNav {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 5rem;
+    color: rgb(20, 20, 20);
+    border: none;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
-#link {
+.sairNav:hover{
+    color: rgb(95, 95, 95);
+}
+
+.a-nav {
     font-size: 1.2rem;
     position: relative;
 }
 
-#link::after {
+.a-nav::after {
     content: '';
     position: absolute;
     width: 0;
@@ -37,39 +81,20 @@
     transition: width 0.3s ease, right 0.3s ease;
 }
 
-#link:hover::after {
+.a-nav:hover::after {
     width: 100%;
     left: 0;
 }
 
 
-.navbar-collapse {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
+
+@media screen and (max-width: 1200px) {
+    .container-ul, .exitNav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
 }
 
-.navbar-nav {
-    display: flex;
-    gap: 5rem;
-}
-
-.exitNav {
-    margin-left: 2rem;
-}
-
-.sairNav {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    margin-right: 5rem;
-    color: rgb(20, 20, 20);
-    border: none;
-    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-}
-
-
-
-.sairNav:hover{
-    color: rgb(95, 95, 95);
-}

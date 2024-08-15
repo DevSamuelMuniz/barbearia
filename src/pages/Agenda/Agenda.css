@@ -41,7 +41,7 @@
 }
 
 
-.total-card-financeiro{
+.total-card-financeiro {
     font-size: 1.4rem;
 }
 
@@ -82,10 +82,31 @@
     gap: 2rem;
 }
 
-.card-left{
+.card-left {
     width: 20%;
 }
 
-.card-right{
+.card-right {
     width: 20%;
 }
+
+@media  (min-width: 768px) {
+    .ctn-financeiro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-card-financeiro {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        /* Ajuste o valor conforme necessário */
+    }
+
+    .card-left,
+    .card-right {
+        width: 20%;
+        /* Redefine a largura para dispositivos maiores */
+    }
+}
+
