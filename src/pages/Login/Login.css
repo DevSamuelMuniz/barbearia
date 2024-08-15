@@ -11,7 +11,6 @@
     width: 40%;
     display: flex;
     justify-content: center;
-
 }
 
 .col-right {
@@ -24,26 +23,39 @@
 }
 
 .formLogin {
-    width: 30rem;
+    width: 100%;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
 }
 
-
-
 .bg-login {
-    background-color:  rgba(255, 255, 255, 0.349);
-    padding: 12% 20%;
+    background-color: rgba(255, 255, 255, 0.349);
     width: 70%;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .h1-login {
     color: white;
+}
+
+.loginInput {
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
 }
 
 .btnLogin{
@@ -62,19 +74,45 @@
 .btnLogin:hover{
     color: white;   
     background-color: #c98b40;
-    }
+}
 
-.form-label{
+.form-label {
     color: white;
 }
 
-.link-registro{
+.link-registro {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
     padding-top: 2rem;
+    text-align: center;
 }
 
-.link-registro:hover{
+.link-registro:hover {
     color: rgba(255, 255, 255, 0.74);
+}
+
+@media screen and (max-width: 700px) {
+
+    .main-login {
+        flex-direction: column;
+    }  
+      
+    .col-left {
+        height: 20%;
+    }
+
+    .col-right {
+        height: 80%;
+        width: 100%;
+    }
+
+    .bg-login {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+
 }
