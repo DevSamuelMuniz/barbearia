@@ -58,12 +58,12 @@ function Registro() {
     }
 
     return (
-        <main className="main-login">
+        <main className="main-register">
             <div className="col-right">
-                <div className="bg-login">
-                    <h1 className="h1-login">REGISTRO</h1>
-                    <form className="formLogin" onSubmit={handleSubmit}>
-                        <div className="mb-3 loginInput">
+                <div className="bg-register">
+                    <h1 className="h1-register">REGISTRO</h1>
+                    <form className="formRegister" onSubmit={handleSubmit}>
+                        <div className="mb-3 registerInput">
                             <label htmlFor="name" className="form-label">Nome</label>
                             <input
                                 type="text"
@@ -75,7 +75,7 @@ function Registro() {
                             />
                         </div>
 
-                        <div className="mb-3 loginInput">
+                        <div className="mb-3 registerInput">
                             <label htmlFor="email" className="form-label">Email</label>
                             <input
                                 type="email"
@@ -88,7 +88,7 @@ function Registro() {
                             />
                         </div>
 
-                        <div className="mb-3 loginInput">
+                        <div className="mb-3 registerInput">
                             <label htmlFor="password" className="form-label">Senha</label>
                             <input
                                 type="password"
@@ -100,7 +100,7 @@ function Registro() {
                             />
                         </div>
 
-                        <div className="mb-3 loginInput">
+                        <div className="mb-3 registerInput">
                             <label htmlFor="confirmPassword" className="form-label">Confirme a Senha</label>
                             <input
                                 type="password"
@@ -116,7 +116,7 @@ function Registro() {
 
                         <button type="submit" className="btnRegistro">Registrar</button>
                     </form>
-                    <a href="/" className="link-registro">Faça o seu login aqui!</a>
+                    <a href="/" className="link-registro">Faça o seu register aqui!</a>
                 </div>
             </div>
 
