@@ -53,7 +53,7 @@ function CardPc() {
             {agendamentos.map((agendamento) => (
                 <main className="main-card" key={agendamento.id}>
                     <div className="card-left">
-                        <h1 className="nome-card">{agendamento.nomeCliente}</h1>
+                    <h1 className="nome-card">{agendamento.nomeCliente}</h1>
                         <h2 className="barbeiro-card">{agendamento.nomeBarbeiro}</h2>
                     </div>
 

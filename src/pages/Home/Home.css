@@ -7,16 +7,45 @@
 
 .ctn-home {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: auto;
     width: 100%;
+    gap: 5rem;
 }
 
 header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #fff; 
+    background-color: #fff;
     z-index: 1000;
+}
+
+@media screen and (max-width: 850px) {
+    .ctn-home {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .ctn-home {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .ctn-home {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .ctn-home {
+        gap: 3rem;
+        margin: 2rem 0;
+    }
+
 }

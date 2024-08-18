@@ -116,7 +116,7 @@ function Registro() {
 
                         <button type="submit" className="btnRegistro">Registrar</button>
                     </form>
-                    <a href="/" className="link-registro">Faça o seu register aqui!</a>
+                    <a href="/" className="link-registro">Faça o seu login aqui!</a>
                 </div>
             </div>
 

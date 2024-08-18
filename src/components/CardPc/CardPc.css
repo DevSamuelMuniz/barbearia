@@ -1,23 +1,37 @@
-
 .main-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 2rem;
 
-    width: 30rem;
-
-
+    width: 100%;
     border-bottom: 1px solid rgb(134, 134, 134);
     padding-bottom: 2rem;
     margin: 3rem 0;
-
     color: rgb(53, 53, 53);
+}
+
+.card-left,
+.card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-right {
+    align-items: end;
+}
+
+.nome-card,
+.barbeiro-card,
+.hora-card {
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .nome-card {
     font-size: 1.4rem;
-    width: 20rem;
 }
 
 .barbeiro-card {
@@ -25,7 +39,9 @@
 }
 
 .hora-card {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    text-align: end;
+    width: 10rem;
 }
 
 .btn-card {
@@ -35,15 +51,17 @@
     padding: 0.3rem 1.4rem;
     border-radius: .2rem;
 }
-.card-right{
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    gap: 1rem;
-}
 
-.card-left{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+@media screen and (max-width: 1260px) {
+    .nome-card {
+        font-size: 1.2rem;
+    }
+
+    .barbeiro-card {
+        font-size: 1rem;
+    }
+
+    .hora-card {
+        font-size: 1.1rem;
+    }
 }
