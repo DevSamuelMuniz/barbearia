@@ -46,7 +46,7 @@ function AdicionarBarbeiro() {
                             />
                         </div>
 
-                        <div className="mb-3 addBarbeInput last">
+                        <div className="mb-3 addBarbeInput CPF">
                             <label htmlFor="CPF" className="form-label">CPF:</label>
                             <input 
                                 type="text" 

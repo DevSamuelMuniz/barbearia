@@ -70,7 +70,7 @@
     width: 90%;
 }
 
-.last{
+.valor{
     padding-bottom: 2rem;
 }
 
@@ -78,4 +78,52 @@
     -webkit-box-shadow: 4px 7px 17px -4px rgba(0, 0, 0, 0.32);
     -moz-box-shadow: 4px 7px 17px -4px rgba(0, 0, 0, 0.32);
     box-shadow: 4px 7px 17px -4px rgba(0, 0, 0, 0.32);
+}
+
+@media screen and (max-height: 499px){
+    .bg-procedimentos{
+        height: 22rem;
+    }
+    
+    .h1-procedimentos{
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    
+    .add-procedimentos{
+        width: 70%;
+    }
+
+    .valor{
+        padding-bottom: 0.2rem;
+    }
+    
+    .btn-procedimentos{
+        margin: 0.5rem 0;
+    }
+}
+
+@media screen and (min-height: 500px) and (max-height: 600px){
+    .bg-procedimentos{
+        height: 28rem;
+    }
+    
+    .h1-procedimentos{
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    
+    .add-procedimentos{
+        width: 70%;
+    }
+
+    .valor{
+        padding-bottom: 0.2rem;
+    }
+    
+    .btn-procedimentos{
+        margin: 0.5rem 0;
+    }
 }
