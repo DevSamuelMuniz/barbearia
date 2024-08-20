@@ -52,22 +52,22 @@ function Agenda() {
 
             <div className="card-financeiro">
 
-            {agendamentos.map((agendamento) => (
-                <div className="container-card-financeiro">
-                <div className="card-left">
-                    <h1 className="nome-card-financeiro">{agendamento.nomeCliente}</h1>
-                    <h2 className="barbeiro-card">{agendamento.nomeBarbeiro}</h2>
-                </div>
+                {agendamentos.map((agendamento) => (
+                    <div className="container-card-financeiro">
+                        <div className="card-left">
+                            <h1 className="nome-card-financeiro">{agendamento.nomeCliente}</h1>
+                            <h2 className="barbeiro-card">{agendamento.nomeBarbeiro}</h2>
+                        </div>
 
-                <div className="card-mid">
-                    <h2 className="hora-card-financeiro">{formatDateTime(agendamento.horarioMarcado)}</h2>
-                </div>
+                        <div className="card-mid">
+                            <h2 className="hora-card-financeiro">{formatDateTime(agendamento.horarioMarcado)}</h2>
+                        </div>
 
-                <div className="card-right">
-                    <h2 className="valor-card-procedimento">EM PROCESSO</h2>
-                </div>
-            </div>
-            ))}
+                        <div className="card-right">
+                            <h2 className="valor-card-procedimento">EM PROCESSO</h2>
+                        </div>
+                    </div>
+                ))}
 
 
                 {financeiros.map((financeiro) => (
