@@ -1,7 +1,7 @@
 .burger-menu {
     display: none;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-left: auto; /* Muda o menu para o lado direito */
     margin-right: 3rem; /* Ajusta o espaçamento à direita */
 }
@@ -62,11 +62,11 @@
     align-items: flex-end; 
 }
 
-.li-nav {
-    margin-bottom: 1rem; /* Espaçamento entre os itens */
+.li-nav-burger {
+    margin-bottom: 1rem;
 }
 
-.a-nav {
+.a-nav-burger {
     text-decoration: none;
     color: black;
     font-size: 1rem;

@@ -17,7 +17,7 @@ function BurgerMenu() {
     };
 
     return (
-     <div className="test">
+     <div className="main-burger">
            <div className="burger-menu">
             <button className={`burger-button ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <span className="burger-bar"></span>
@@ -26,11 +26,11 @@ function BurgerMenu() {
             </button>
             <div className={`menu-content ${isOpen ? 'show' : ''}`}>
                 <ul className="ul-nav">
-                    <li className="li-nav"><a className="a-nav" href="/home">INICIO</a></li>
-                    <li className="li-nav"><a className="a-nav" href="/agenda">AGENDA</a></li>
-                    <li className="li-nav"><a className="a-nav" href="/financeiro">FINANCEIRO</a></li>
-                    <li className="li-nav"><a className="a-nav" href="/barbeiros">BARBEIROS</a></li>
-                    <li className="li-nav"><a className="a-nav" href="/procedimentos">PROCEDIMENTOS</a></li>
+                    <li className="li-nav-burger"><a className="a-nav-burger" href="/home">INICIO</a></li>
+                    <li className="li-nav-burger"><a className="a-nav-burger" href="/agenda">AGENDA</a></li>
+                    <li className="li-nav-burger"><a className="a-nav-burger" href="/financeiro">FINANCEIRO</a></li>
+                    <li className="li-nav-burger"><a className="a-nav-burger" href="/barbeiros">BARBEIROS</a></li>
+                    <li className="li-nav-burger"><a className="a-nav-burger" href="/procedimentos">PROCEDIMENTOS</a></li>
                 </ul>
                 <button onClick={handleLogout} className="sairNav">SAIR</button>
             </div>
