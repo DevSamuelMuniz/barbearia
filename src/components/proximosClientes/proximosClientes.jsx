@@ -11,7 +11,7 @@ const filtro = 'Mais recentes'
 
 function ProximosClientes() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    
+
     const dados = [
         { nome: '', barbeiro: '', hora: '' }
     ];
@@ -24,10 +24,6 @@ function ProximosClientes() {
         <main className="main-pc">
             <div>
                 <h1 className="title-pc">PRÓXIMOS CLIENTES</h1>
-                <div className="ctn-filtro">
-                    <div className="filtro-pc">{date}</div>
-                    <div className="filtro-pc">{filtro}</div>
-                </div>
             </div>
 
             <div className="card-ctn scroll">

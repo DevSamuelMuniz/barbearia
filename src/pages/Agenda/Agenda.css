@@ -27,6 +27,11 @@
     text-transform: uppercase;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+
 .ctn-financeiro {
     display: flex;
     justify-content: space-evenly;
@@ -99,6 +104,8 @@
 .card-right {
     width: 20%;
 }
+
+
 
 @media screen and (max-width: 768px) {
 

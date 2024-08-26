@@ -84,7 +84,6 @@ function fetchDataByDateForAgendamento(date) {
                 <h1 className="title-financeiro">Todos os Clientes</h1>
                 <div className="ctn-filtro ctn-financeiro">
                     <input type="date" className="date" name="date" value={date} onChange={changeData} />
-                    <div className="filtro-pc">MAIS RECENTE</div>
                 </div>
             </div>
 
