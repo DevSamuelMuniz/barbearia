@@ -28,7 +28,7 @@ function Agenda() {
                 .catch(error => {
                     console.error("There was an error fetching the data!", error);
                 });
-        // se não ele faz a chamada
+        // se não, ele faz a chamada
         } else {
             fetchDataByDateForFinanceiros(formattedDate);
             fetchDataByDateForAgendamento(formattedDate);

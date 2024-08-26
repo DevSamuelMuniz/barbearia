@@ -7,17 +7,52 @@ import Header from "../../components/Header/Header";
 function Financeiro() {
 
     const [financeiros, setFinanceiros] = useState([]);
+    const [date, setDate] = useState('');
+    const [formattedDate, setFormattedDate] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/financeiros')
-            .then(response => {
-                setFinanceiros(response.data);
-            })
-            .catch(error => {
-                console.error("There was an error fetching the data!", error);
-            });
-    }, []);
+             //se date for vazio
+            if (date === '') {
+                axios.get('http://localhost:5000/api/financeiros')
+                    .then(response => {
+                        setFinanceiros(response.data);
+                    })
+                    .catch(error => {
+                        console.error("There was an error fetching the data!", error);
+                    });
+            // se não, ele faz a chamada
+            } else {
+                fetchDataByDateForFinanceiros(formattedDate);
+            }
+    }, [date, formattedDate]);
 
+
+//faz a chamada do financeiro para o backend
+function fetchDataByDateForFinanceiros(date) {
+    axios.get('http://localhost:5000/api/get-date-financeiro', { params: { date } })
+        .then(response => {
+            setFinanceiros(response.data)
+        })
+        .catch(error => {
+            console.log('error', error);
+        });
+}
+
+
+
+//captura a mudança de data
+const changeData = (event) => {
+    const novaData = event.target.value;
+    setDate(novaData);
+    setFormattedDate(formatDate(novaData));
+};
+
+
+//formata a data para o formato do banco
+const formatDate = (date) => {
+    const [year, month, day] = date.split('-');
+    return `${day}/${month}/${year}`;
+};
 
 
 
@@ -30,7 +65,7 @@ function Financeiro() {
             <div className="container-financeiro">
                 <h1 className="title-financeiro">FINANCEIRO</h1>
                 <div className="ctn-filtro ctn-financeiro">
-                    <div className="filtro-pc">10/04/2001</div>
+                    <input type="date" className="date" name="date" value={date} onChange={changeData} />
                     <div className="filtro-pc">MAIS RECENTE</div>
                 </div>
             </div>
