@@ -12,6 +12,7 @@ import AdicionarBarbeiro from "./pages/AdicionarBarbeiro/AdicionarBarbeiro";
 import Financeiro from "./pages/Financeiro/Financeiro";
 import Procedimentos from "./pages/Procedimentos/Procedimentos";
 import Agenda from "./pages/Agenda/Agenda";
+import AgendamentoCliente from "./pages/Agendamento/Agendamento";
 
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
+        <Route path="/AgendamentoCliente" element={<AgendamentoCliente />} />
 
         <Route element={<PrivateRoute />}>
           <Route path="/home" element={<Home />} />
