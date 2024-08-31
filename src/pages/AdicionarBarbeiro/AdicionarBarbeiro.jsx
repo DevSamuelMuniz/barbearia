@@ -55,6 +55,7 @@ function AdicionarBarbeiro() {
                                 placeholder="Digite o CPF aqui" 
                                 value={cpf}
                                 onChange={(e) => setCpf(e.target.value)}
+                                maxLength={11}
                             />
                         </div>
                         <button type="submit" className="btnAddBarbe">Adicionar</button>

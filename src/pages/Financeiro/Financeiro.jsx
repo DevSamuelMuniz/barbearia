@@ -15,7 +15,7 @@ function Financeiro() {
             if (date === '') {
                 axios.get('http://localhost:5000/api/financeiros')
                     .then(response => {
-                        setFinanceiros(response.data);
+                        setFinanceiros(response.data.reverse());
                     })
                     .catch(error => {
                         console.error("There was an error fetching the data!", error);
