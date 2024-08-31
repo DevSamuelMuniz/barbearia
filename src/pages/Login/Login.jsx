@@ -87,8 +87,9 @@ function Login() {
                         
                         <button type="submit" className="btnLogin">Entrar</button>
                     </form>
+
                     <a href="/registro" className="link-registro">Faça seu cadastro aqui!</a>
-                    <a href="/AgendamentoCliente" className="link-registro">Faça seu agendamento</a>
+                    <a href="/AgendamentoCliente" className="link-agendamento">Faça seu agendamento aqui!</a>
                 </div>
             </div>
         </main>

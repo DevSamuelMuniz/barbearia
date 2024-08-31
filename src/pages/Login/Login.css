@@ -92,6 +92,23 @@
     color: rgba(255, 255, 255, 0.74);
 }
 
+.link-agendamento {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #cf8020;
+    background-color: white;
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
+}
+
+.link-agendamento:hover {
+    color: white;
+    background-color: #ee901d;
+}
+
 @media screen and (max-width: 700px) {
 
     .main-login {

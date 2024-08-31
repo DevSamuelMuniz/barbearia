@@ -6,9 +6,6 @@ import "./proximosClientes.css"
 //components
 import CardPc from "../CardPc/CardPc";
 
-const date = '10/11/2023'
-const filtro = 'Mais recentes'
-
 function ProximosClientes() {
     const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -31,6 +31,7 @@ function BurgerMenu() {
                     <li className="li-nav-burger"><a className="a-nav-burger" href="/financeiro">FINANCEIRO</a></li>
                     <li className="li-nav-burger"><a className="a-nav-burger" href="/barbeiros">BARBEIROS</a></li>
                     <li className="li-nav-burger"><a className="a-nav-burger" href="/procedimentos">PROCEDIMENTOS</a></li>
+                    <li className="li-nav"><a className="a-nav" href="/horariosBarbeiro">HORÁRIOS</a></li>
                 </ul>
                 <button onClick={handleLogout} className="sairNav">SAIR</button>
             </div>

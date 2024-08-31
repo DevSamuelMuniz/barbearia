@@ -25,6 +25,7 @@ function Header() {
                             <li className="li-nav"><a className="a-nav" href="/financeiro">FINANCEIRO</a></li>
                             <li className="li-nav"><a className="a-nav" href="/barbeiros">BARBEIROS</a></li>
                             <li className="li-nav"><a className="a-nav" href="/procedimentos">PROCEDIMENTOS</a></li>
+                            <li className="li-nav"><a className="a-nav" href="/horariosBarbeiro">HORÁRIOS</a></li>
                         </ul>
                     </div>
                 </div>

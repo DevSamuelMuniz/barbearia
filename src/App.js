@@ -13,6 +13,7 @@ import Financeiro from "./pages/Financeiro/Financeiro";
 import Procedimentos from "./pages/Procedimentos/Procedimentos";
 import Agenda from "./pages/Agenda/Agenda";
 import AgendamentoCliente from "./pages/Agendamento/Agendamento";
+import HorariosBarbeiro from "./pages/horariosBarbeiro/horariosBarbeiro";
 
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/financeiro" element={<Financeiro />} />
           <Route path="/procedimentos" element={<Procedimentos />} />
           <Route path="/agenda" element={<Agenda />} />
+          <Route path="/horariosBarbeiro" element={<HorariosBarbeiro />} />
         </Route>
 
       </Routes>

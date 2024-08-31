@@ -1,0 +1,136 @@
+.main-agendamentoCliente {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.col-left-agendamentoCliente {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.col-right-agendamentoCliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    background-color: #E18B22;
+}
+
+.formRegister-agendamentoCliente {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-register-agendamentoCliente {
+    background-color: rgba(255, 255, 255, 0.349);
+    width: 70%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.h1-register-agendamentoCliente {
+    color: white;
+}
+
+.registerInput-agendamentoCliente {
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+.form-control-agendamentoCliente {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+}
+
+.btnRegistro-agendamentoCliente{
+    color: #E18B22;
+    background-color: white;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out ;
+    padding: 2% 18%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btnregister-agendamentoCliente:hover{
+    color: white;   
+    background-color: #c98b40;
+}
+
+.form-label-agendamentoCliente {
+    color: white;
+}
+
+.link-registro-agendamentoCliente {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.link-registro-agendamentoCliente:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.apenasNum{
+    color: rgb(219, 16, 16);
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+
+    .main-agendamentoCliente {
+        flex-direction: column-reverse;
+    }  
+      
+    .col-left-agendamentoCliente {
+        height: 20%;
+    }
+
+    .col-right-agendamentoCliente {
+        height: 80%;
+        width: 100%;
+    }
+
+    .bg-register-agendamentoCliente {
+        width: 90%;
+    }
+
+}
+
+
+@media screen and  (max-height: 750px) {
+
+    .h1-register{
+        font-size: 1.2rem;
+    }   
+
+    .link-registro-agendamentoCliente {
+        padding: 0;
+    }
+
+    .bg-register-agendamentoCliente {
+        scale: 0.9;
+}
+}
